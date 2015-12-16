@@ -3,34 +3,67 @@
   "name": "Begravelsesprotokoller 1861-1940",
   "description": "Brug år og nummer fra  det alfabetiske register til at finde begravelsen.",
   "url": "http://www.kbharkiv.dk/sog-i-arkivet/kilder-pa-nettet/begravelser",
+  //This is relevant for configuration of the form
   "tasks": [
     {
       "id": "1",
       "name": "Indtastning af begravelsesprotokoller",
       "description": "Dette er Stadsarkivets første indtastningsprojekt",
       "collection_id": "1",
+      //An entity is a collection of fields that belongs to each other in a logical sense
+      //Example: The main person of a post, or the addresses of a person
       "entities": [
         {
           "id": "1",
+          //Is the entity required?
           "required": "1",
+          //How many entries per post of this type? (1= zero (depending on required attribute) or one, 
+          //many = zero (depending on required attribute) to many)
           "countPerEntry": "1",
-          "dbTableName": "begrav_personer",
-          "isMarkable": "1",
+          //The title of the entity
           "guiName": "Begravet person",
           "task_id": "1",
+          //Child entities are entities related to the specific entity
+          //Example: The positions of the main person
+          "child_entities": [
+            {
+              "id": "3",
+              "required": "0",
+              "countPerEntry": "many",
+              "guiName": "Hovedpersonens stillinger",
+              "task_id": "1",
+              "fields": [
+                {
+                  "id": "1",
+                  "name": "Stilling",
+                  "formType": "text",
+                  "defaultValue": null,
+                  "placeholder": "Personens stilling",
+                  "helpText": "Indtast én stilling af gangen",
+                  "required": "1",
+                  "field_group_number": "3",
+                  "field_group_name": "Hovedpersonens stillinger"
+                }
+              ]
+            }
+          ],
+          //The fields of the entity. This is single types of data, that can be typed into a field in a form
           "fields": [
             {
               "id": "1",
-              "name": "Fornavn",
+              //The name of the field as presented to the user
+              "gui_name": "Fornavn",
+              //The type of field. Possible values: text, date, autocomplete
               "formType": "text",
               "defaultValue": null,
               "placeholder": "Personens fornavn",
               "helpText": "Indtast personens første navn her",
-              "dbFieldName": "firstname",
+              //The name of the field. Used to identify data when sent to the server
+              "fieldName": "firstname",
               "required": "1",
-              "validationRegularExpression": "false",
-              "validationErrorMessage": "Fornavnet skal udfyldes",
-              "field_group_number": "1"
+              //The step in which the field belongs (an entity can be divided in several steps depending on the source)
+              "field_group_number": "1",
+              "field_group_name": "Hovedpersonens fornavne"
             },
             {
               "id": "2",
@@ -39,32 +72,28 @@
               "defaultValue": null,
               "placeholder": "Personens efternavn",
               "helpText": "Indtast alle andre navne end fornavnet",
-              "dbFieldName": "lastname",
               "required": "1",
-              "validationRegularExpression": "false",
-              "validationErrorMessage": "Efternavn skal udfyldes",
-              "field_group_number": "1"
+              "field_group_number": "1",
+              "field_group_name": "Hovedpersonens efternavne"
             },
             {
               "id": "3",
               "name": "Fødested",
-              "formType": "autocomplete",
+              "formType": "typeahead",
+              "formSource": "http://www.kbhkilder.dk/api/datasource?type=6"
               "defaultValue": null,
               "placeholder": "Personens fødested",
               "helpText": "Vælg et fødested på listen",
-              "dbFieldName": "birthplace",
               "required": "1",
-              "validationRegularExpression": "false",
-              "validationErrorMessage": "Fødested udfyldes",
-              "field_group_number": "2"
+              "field_group_number": "2",
+              "field_group_name": "Hovedpersonens efternavne"
             }
           ]
         },
         {
           "id": "2",
           "required": "0",
-          "countPerEntry": "-1",
-          "dbTableName": "begrav_personer",
+          "countPerEntry": "many",
           "isMarkable": "1",
           "guiName": "Pårørende på bladet",
           "task_id": "1",
@@ -76,11 +105,9 @@
               "defaultValue": null,
               "placeholder": "Personens fornavn",
               "helpText": "Indtast personens første navn her",
-              "dbFieldName": "firstname",
               "required": "1",
-              "validationRegularExpression": "false",
-              "validationErrorMessage": "Fornavnet skal udfyldes",
-              "field_group_number": "1"
+              "field_group_number": "1",
+              "field_group_name": "Pårørende"
             },
             {
               "id": "2",
@@ -89,17 +116,16 @@
               "defaultValue": null,
               "placeholder": "Personens efternavn",
               "helpText": "Indtast alle andre navne end fornavnet",
-              "dbFieldName": "lastname",
               "required": "1",
-              "validationRegularExpression": "false",
-              "validationErrorMessage": "Efternavn skal udfyldes",
-              "field_group_number": "1"
+              "field_group_number": "1",
+              "field_group_name": "Pårørende"
             }
           ]
         }
       ]
     }
   ],
+  //Irrelevant for indexing
   "filters": [
     {
       "id": "1",
