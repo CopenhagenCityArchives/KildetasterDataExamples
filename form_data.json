@@ -1,60 +1,83 @@
 [
 	{
+		//The id of the entity type to which the fields belongs
 		"entity_id": 1,
-		"values":
+		"fields":
 		[
-			[
-				{
-					"fieldname": "firstname", 
-					"value": "Hans", 
-					"id": null
-				},
-				{
-					"fieldname": "lastname", 
-					"value": "Jensen", 
-					"id": null
-				},
-				{
-					"fieldname": "birthplace",
-					"value": "København", 
-					"id": "231287" 
-				},				
-				{
-					"fieldname": "dateofbirth", 
-					"value": null, 
-					"id": null
-				}
-			]
+			{
+				//The name of the field
+				"fieldname": "firstname", 
+				//The user created value
+				"value": "Hans"
+			},
+			{
+				"fieldname": "lastname", 
+				"value": "Jensen"
+			},
+			{
+				"fieldname": "birthplace",
+				"value": "København", 
+				//The id of the value. Relevant if the data comes from a typeahead field
+				"id": "231287" 
+			}
+		],
+		//Data from child entities
+		"child_entities":
+		[
+			{
+			"entity_id": 3,
+			"fields":
+				[
+					{
+						//The name of the field
+						"fieldname": "position", 
+						//The user created value
+						"value": "Smed"
+					}
+				]
+			},
+			{
+			"entity_id": 3,
+			"fields":
+				[
+					{
+						"fieldname": "position", 
+						"value": "Arbejdsmand"
+					}
+				]
+			}			
 		]
 	},
 	{
 		"entity_id": 2,
-		"values":
+		"fields":
 		[
-			[
-				{
-					"fieldname": "firstname", 
-					"value": "Jens", 
-					"id": null
-				},
-				{
-					"fieldname": "lastname", 
-					"value": "Nielsen", 
-					"id": null
-				}
-			],
-			[
-				{
-					"fieldname": "firstname", 
-					"value": null, 
-					"id": null
-				},
-				{
-					"fieldname": "lastname", 
-					"value": "Hansen", 
-					"id": null
-				}
-			]
+			{
+				"fieldname": "firstname", 
+				"value": "Jens", 
+				"id": null
+			},
+			{
+				"fieldname": "lastname", 
+				"value": "Nielsen", 
+				"id": null
+			}
+		]
+	},	
+	{
+		"entity_id": 2,
+		"fields":
+		[
+			{
+				"fieldname": "firstname", 
+				"value": "Hans", 
+				"id": null
+			},
+			{
+				"fieldname": "lastname", 
+				"value": "Frandsen", 
+				"id": null
+			}
 		]
 	}	
 ]
