@@ -80,7 +80,7 @@
               "id": "3",
               "name": "Fødested",
               "formType": "typeahead",
-              "formSource": "http://www.kbhkilder.dk/api/datasource?type=6"
+              "formSource": "http://www.kbhkilder.dk/api/datasource?type=6",
               "defaultValue": null,
               "placeholder": "Personens fødested",
               "helpText": "Vælg et fødested på listen",
