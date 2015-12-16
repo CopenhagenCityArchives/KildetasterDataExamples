@@ -1,0 +1,60 @@
+[
+	{
+		"entity_id": 1,
+		"values":
+		[
+			[
+				{
+					"fieldname": "firstname", 
+					"value": "Hans", 
+					"id": null
+				},
+				{
+					"fieldname": "lastname", 
+					"value": "Jensen", 
+					"id": null
+				},
+				{
+					"fieldname": "birthplace",
+					"value": "København", 
+					"id": "231287" 
+				},				
+				{
+					"fieldname": "dateofbirth", 
+					"value": null, 
+					"id": null
+				}
+			]
+		]
+	},
+	{
+		"entity_id": 2,
+		"values":
+		[
+			[
+				{
+					"fieldname": "firstname", 
+					"value": "Jens", 
+					"id": null
+				},
+				{
+					"fieldname": "lastname", 
+					"value": "Nielsen", 
+					"id": null
+				}
+			],
+			[
+				{
+					"fieldname": "firstname", 
+					"value": null, 
+					"id": null
+				},
+				{
+					"fieldname": "lastname", 
+					"value": "Hansen", 
+					"id": null
+				}
+			]
+		]
+	}	
+]
