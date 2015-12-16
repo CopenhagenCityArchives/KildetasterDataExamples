@@ -1,0 +1,159 @@
+{
+  "id": "1",
+  "name": "Begravelsesprotokoller 1861-1940",
+  "description": "Brug år og nummer fra  det alfabetiske register til at finde begravelsen.",
+  "url": "http://www.kbharkiv.dk/sog-i-arkivet/kilder-pa-nettet/begravelser",
+  "tasks": [
+    {
+      "id": "1",
+      "name": "Indtastning af begravelsesprotokoller",
+      "description": "Dette er Stadsarkivets første indtastningsprojekt",
+      "collection_id": "1",
+      "entities": [
+        {
+          "id": "1",
+          "required": "1",
+          "countPerEntry": "1",
+          "dbTableName": "begrav_personer",
+          "isMarkable": "1",
+          "guiName": "Begravet person",
+          "task_id": "1",
+          "fields": [
+            {
+              "id": "1",
+              "name": "Fornavn",
+              "formType": "text",
+              "defaultValue": null,
+              "placeholder": "Personens fornavn",
+              "helpText": "Indtast personens første navn her",
+              "dbFieldName": "firstname",
+              "required": "1",
+              "validationRegularExpression": "false",
+              "validationErrorMessage": "Fornavnet skal udfyldes",
+              "field_group_number": "1"
+            },
+            {
+              "id": "2",
+              "name": "Efternavn",
+              "formType": "text",
+              "defaultValue": null,
+              "placeholder": "Personens efternavn",
+              "helpText": "Indtast alle andre navne end fornavnet",
+              "dbFieldName": "lastname",
+              "required": "1",
+              "validationRegularExpression": "false",
+              "validationErrorMessage": "Efternavn skal udfyldes",
+              "field_group_number": "1"
+            },
+            {
+              "id": "3",
+              "name": "Fødested",
+              "formType": "autocomplete",
+              "defaultValue": null,
+              "placeholder": "Personens fødested",
+              "helpText": "Vælg et fødested på listen",
+              "dbFieldName": "birthplace",
+              "required": "1",
+              "validationRegularExpression": "false",
+              "validationErrorMessage": "Fødested udfyldes",
+              "field_group_number": "2"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "required": "0",
+          "countPerEntry": "-1",
+          "dbTableName": "begrav_personer",
+          "isMarkable": "1",
+          "guiName": "Pårørende på bladet",
+          "task_id": "1",
+          "fields": [
+            {
+              "id": "1",
+              "name": "Fornavn",
+              "formType": "text",
+              "defaultValue": null,
+              "placeholder": "Personens fornavn",
+              "helpText": "Indtast personens første navn her",
+              "dbFieldName": "firstname",
+              "required": "1",
+              "validationRegularExpression": "false",
+              "validationErrorMessage": "Fornavnet skal udfyldes",
+              "field_group_number": "1"
+            },
+            {
+              "id": "2",
+              "name": "Efternavn",
+              "formType": "text",
+              "defaultValue": null,
+              "placeholder": "Personens efternavn",
+              "helpText": "Indtast alle andre navne end fornavnet",
+              "dbFieldName": "lastname",
+              "required": "1",
+              "validationRegularExpression": "false",
+              "validationErrorMessage": "Efternavn skal udfyldes",
+              "field_group_number": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "1",
+      "short_name": "Politiets Mandtal",
+      "long_name": "Politiets Mandtal for København 1866 - 1923",
+      "gui_required_fields_text": "Vælg minimum gade og år",
+      "objects_query": "select MAND_files.id, CONCAT(\\'/collections/mandtal\\',path, fileName) as imageURL, year, month, road_name FROM MAND_files LEFT JOIN MAND_folders ON MAND_folders.id = MAND_files.folder_id WHERE :query AND error_image != 1 ORDER BY year, month, fileName",
+      "primary_table_name": "MAND_files",
+      "starbas_field_name": "NULL",
+      "levels_type": "hierarchy",
+      "filter_levels": [
+        {
+          "id": "1",
+          "filter_id": "1",
+          "name": "month",
+          "gui_name": "Måned",
+          "gui_hide_name": "1",
+          "gui_type": "typeahead",
+          "data_sql": "select distinct month as text, month as id from mand_files where road_name = \"%s\" AND year = \"%s\" order by month",
+          "data": null,
+          "searchable": "1",
+          "required_levels": "road_name;year",
+          "required": "0",
+          "order": "3"
+        },
+        {
+          "id": "2",
+          "filter_id": "1",
+          "name": "year",
+          "gui_name": "År",
+          "gui_hide_name": "1",
+          "gui_type": "typeahead",
+          "data_sql": "select distinct year as text, year as id from mand_files WHERE road_name = \"%s\" order by year",
+          "data": null,
+          "searchable": "1",
+          "required_levels": "road_name",
+          "required": "0",
+          "order": "2"
+        },
+        {
+          "id": "3",
+          "filter_id": "1",
+          "name": "road_name",
+          "gui_name": "Gadenavn",
+          "gui_hide_name": "1",
+          "gui_type": "typeahead",
+          "data_sql": "select navn as id, navn as text from MAND_streets WHERE mand_is_used = 1",
+          "data": null,
+          "searchable": "1",
+          "required_levels": "NULL",
+          "required": "1",
+          "order": "1"
+        }
+      ]
+    }
+  ]
+}
