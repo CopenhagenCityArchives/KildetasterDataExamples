@@ -10,6 +10,10 @@
       "name": "Indtastning af begravelsesprotokoller",
       "description": "Dette er Stadsarkivets første indtastningsprojekt",
       "collection_id": "1",
+      //Indicates whether or not the user should mark up the area of the post as the first thing
+      //Note the data concerning the post area of the page is required to be sent before indexed entities
+      //as this requires a post id
+      "post_marking_required": "1",
       //An entity is a collection of fields that belongs to each other in a logical sense
       //Example: The main person of a post, or the addresses of a person
       "entities": [
@@ -94,7 +98,6 @@
           "id": "2",
           "required": "0",
           "countPerEntry": "many",
-          "isMarkable": "1",
           "guiName": "Pårørende på bladet",
           "task_id": "1",
           "fields": [
