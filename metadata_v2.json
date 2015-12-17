@@ -1,0 +1,80 @@
+[
+    //This is overall config for the form, array with all steps and descriptions
+    "stepDetails": [{
+        "field_group_number": 1,
+        "title": "Indtast navn, alder og stilling",
+        "description": "Indtast personens fulde navn og alder. Navnet er delt op i fornavn (inklusiv mellemnavne) og efternavnet."
+    }, {
+        "step_id": 2,
+        "title": "Indtast bopæl",
+        "description": "”Bopæl” i kilden er her delt op i to felter – vejnavn og nummer."
+    }, {
+        "step_id": 2,
+        "title": "Indtast dødsdato og dødsårsag",
+        "description": "Dødsdagen skrives med tal (dd.mm.åååå) og dødsårsagen skrives som i kilden, selvom der f.eks. findes en dansk betegnelse."
+    }],
+
+    //This is the entities that should be available in the form, each entity can have multiple fields,
+    // and the fields can be on different steps
+    "entities": [{
+
+        "id": 1,
+        "required": 1,
+        "countPerEntry": 1,
+        "guiName": "Begravet person",
+        "task_id": 1,
+        //Is it nessesary that the entity lists its children?
+        //Cant a 'child entity' not just have a reference to its parent?, and maybe vice versa?
+        "child_entities": [{
+            
+            "id": 3,
+            "required": 0,
+            "countPerEntry": "many",
+            "guiName": "Hovedpersonens stillinger",
+            "task_id": 1,
+            "fields": [{
+                "id": 1,
+                "name": "Stilling",
+                "formType": "text",
+                "defaultValue": null,
+                "placeholder": "Personens stilling",
+                "helpText": "Indtast én stilling af gangen",
+                "required": 1,
+                //Place this field on step 1
+                "field_group_number": 1
+            }]
+
+        }],
+
+        "fields": [{
+            "id": 1,
+            "gui_name": "Fornavn",
+            "formType": "text",
+            "defaultValue": null,
+            "placeholder": "Personens fornavn",
+            "helpText": "Indtast personens første navn her",
+            "fieldName": "firstname",
+            "required": "1",
+            "field_group_number": 1
+        }, {
+            "id": 2,
+            "name": "Efternavn",
+            "formType": "text",
+            "defaultValue": null,
+            "placeholder": "Personens efternavn",
+            "helpText": "Indtast alle andre navne end fornavnet",
+            "required": 1,
+            "field_group_number": 1
+        }, {
+            "id": "3",
+            "name": "Fødested",
+            "formType": "typeahead",
+            "formSource": "http://www.kbhkilder.dk/api/datasource?type=6",
+            "defaultValue": null,
+            "placeholder": "Personens fødested",
+            "helpText": "Vælg et fødested på listen",
+            "required": 1,
+            "field_group_number": 2
+        }]
+    }]
+]
