@@ -58,7 +58,7 @@
         "field": "deathcause",
         "labelText": "Dødsårsag",
         "type": "typeahead",
-        "options": "url to where to get options,
+        "options": "url to where to get options",
         "value": "",
         "helpText": "Årsagen til personens død. Kan findes efter teksten ”..af…” i kilden. Skrives som i kilden.)"
     }]
