@@ -1,0 +1,65 @@
+[{
+    "id": 1,
+    "title": "Indtast navn og alder",
+    "description": "Indtast personens fulde navn og alder. Navnet er delt op i fornavn (inklusiv mellemnavne) og efternavnet.",
+    "fields": [{
+        "field": "firstname",
+        "labelText": "Fornavn(e)",
+        "type": "text",
+        "value": "",
+        "helpText": "Alle personens for- og mellemnavne. Disse findes efter teksten ”…begraves” i kilden",
+        "errorText": ""
+    }, {
+        "field": "lastname",
+        "labelText": "Efternavn",
+        "type": "text",
+        "value": "",
+        "helpText": "Personens efternavn. Èt navn - eventuelt to, hvis de er separeret af en bindestreg. Findes efter for- og mellemnavne i kilden.",
+        "errorText": ""
+    }, {
+        "field": "age",
+        "labelText": "Alder",
+        "type": "text",
+        "value": "",
+        "helpText": "Her skrives personens alder ved dødsdagen. Alderen findes lige før teksten ”Aar gl.” i teksten.",
+        "errorText": ""
+    }]
+}, {
+    "id": 2,
+    "title": "Indtast bopæl",
+    "description": "”Bopæl” i kilden er her delt op i to felter – vejnavn og nummer.",
+    "fields": [{
+        "field": "address",
+        "labelText": "Vejnavn",
+        "type": "typeahead",
+        "options": "url to where to get options,
+        "value": "",
+        "helpText": "Navnet på gaden/vejen hvor personen boede på ved sin død. Findes efter teksten ”Bopæl” i kilden.)"
+    }, {
+        "field": "number",
+        "labelText": "Husnummer",
+        "type": "text",
+        "value": "",
+        "helpText": "Husnummeret – kommer lige efter vejnavnet under ”Bopæl”-indførslen. Hvis der er indført et interval skrives det første nummer.",
+        "errorText": ""
+    }]
+}, {
+    "id": 3,
+    "title": "Indtast dødsdato og dødsårsag",
+    "description": "Dødsdagen skrives med tal (dd.mm.åååå) og dødsårsagen skrives som i kilden, selvom der f.eks. findes en dansk betegnelse.",
+    "fields": [{
+        "field": "deathday",
+        "labelText": "Dødsdag",
+        "type": "text",
+        "value": "",
+        "helpText": "Dagen hvor personen døde. Den findes efter teksten ”…död d.”. Årstal findes under navnet på kilden.",
+        "errorText": ""
+    }, {
+        "field": "deathcause",
+        "labelText": "Dødsårsag",
+        "type": "typeahead",
+        "options": "url to where to get options,
+        "value": "",
+        "helpText": "Årsagen til personens død. Kan findes efter teksten ”..af…” i kilden. Skrives som i kilden.)"
+    }]
+}]
