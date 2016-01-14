@@ -1,0 +1,70 @@
+{
+    "steps": [{
+        "id": 1,
+        "title": "Indtast navn og alder",
+        "description": "Indtast personens fulde navn og alder. Navnet er delt op i fornavn (inklusiv mellemnavne) og efternavnet.",
+        "form": ["firstName", "lastName"]
+    }, {
+        "id": 2,
+        "title": "Indtast bopæl",
+        "description": "”Bopæl” i kilden er her delt op i to felter – vejnavn og nummer.",
+        "form": ["street", "streetNumber"]
+    }, {
+        "id": 3,
+        "title": "Indtast dødsdato og dødsårsag",
+        "description": "Dødsdagen skrives med tal (dd.mm.åååå) og dødsårsagen skrives som i kilden, selvom der f.eks. findes en dansk betegnelse.",
+        "form": ["deathDate", "deathCause"]   
+    },
+    {
+        "id": 4,
+        "title": "Indtast stillinger",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, cupiditate, repudiandae! Corporis eveniet, distinctio modi! Autem, placeat quam ad temporibus!",
+        "form": [{
+            "key":"ocupations",
+            "add": "Tilføj stilling",
+            "style": {
+                "add": "btn-default"
+            }
+        }]
+    }],
+
+    "schema": {
+        "type": "object",
+        "title": "Indtast navn og alder",
+        "properties": {
+            "firstName": {
+                "title": "Personens fornavn",
+                "type": "string"
+            },
+            "lastName": {
+                "title": "Personens efternavn",
+                "type": "string"
+            },
+            "street": {
+                "title": "Vejnavn",
+                "type": "string"
+            },
+            "streetNumber": {
+                "title": "Nummer",
+                "type": "number"
+            },                
+            "deathDate": {
+                "title": "Dødsdag",
+                "type": "string"
+            },
+            "deathCause": {
+                "title": "Dødsårsag",
+                "type": "string"
+            },
+            "ocupations": {
+                "title": "Personens stillinger",
+                "type": "array",
+                "items": {                
+                    "title": "Stilling",
+                    "type": "string",
+                    "add": "Meffe"
+                }
+            }
+        }
+    }
+}
