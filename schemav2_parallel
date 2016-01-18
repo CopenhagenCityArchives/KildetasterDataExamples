@@ -27,7 +27,7 @@
             "entity_id": "1",
             "entity_field_id": "3",
             "title": "Fødested",
-            "type": "autocomplete",
+            "type": "typeahead",
             "pattern": "",
             "description": "Vælg et fødested på listen",
             "validationMessage": "Fødested udfyldes",
@@ -54,6 +54,38 @@
             "description": "Indtast personens første navn her",
             "validationMessage": "Fornavnet skal udfyldes",
             "default": null
+          },
+          "Stillinger": {
+            "title": "Stillinger",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "8": {
+                  "parent_id": "1",
+                  "entity_id": "3",
+                  "entity_field_id": "8",
+                  "title": "8",
+                  "type": "object",
+                  "pattern": null,
+                  "description": null,
+                  "validationMessage": null,
+                  "default": null
+                },
+                "7": {
+                  "parent_id": "1",
+                  "entity_id": "3",
+                  "entity_field_id": "7",
+                  "title": "7",
+                  "type": "object",
+                  "pattern": "",
+                  "description": null,
+                  "validationMessage": "",
+                  "default": null
+                }
+              }
+            },
+            "required": []
           }
         },
         "required": [
@@ -66,52 +98,37 @@
       "2": {
         "title": "Ægtefæller",
         "type": "array",
-        "items": [
-          {
-            "parent_id": null,
-            "entity_id": "2",
-            "entity_field_id": "5",
-            "title": "5",
-            "type": "object",
-            "pattern": "",
-            "description": "Indtast alle andre navne end fornavnet",
-            "validationMessage": "Efternavn skal udfyldes",
-            "default": null
-          },
-          {
-            "parent_id": null,
-            "entity_id": "2",
-            "entity_field_id": "4",
-            "title": "4",
-            "type": "object",
-            "pattern": "",
-            "description": "Indtast personens første navn her",
-            "validationMessage": "Fornavnet skal udfyldes",
-            "default": null
+        "items": {
+          "type": "object",
+          "properties": {
+            "5": {
+              "parent_id": null,
+              "entity_id": "2",
+              "entity_field_id": "5",
+              "title": "5",
+              "type": "object",
+              "pattern": "",
+              "description": "Indtast alle andre navne end fornavnet",
+              "validationMessage": "Efternavn skal udfyldes",
+              "default": null
+            },
+            "4": {
+              "parent_id": null,
+              "entity_id": "2",
+              "entity_field_id": "4",
+              "title": "4",
+              "type": "object",
+              "pattern": "",
+              "description": "Indtast personens første navn her",
+              "validationMessage": "Fornavnet skal udfyldes",
+              "default": null
+            }
           }
-        ],
+        },
         "required": [
           "5",
           "4"
         ]
-      },
-      "3": {
-        "title": "Stillinger",
-        "type": "array",
-        "items": [
-          {
-            "parent_id": null,
-            "entity_id": "3",
-            "entity_field_id": "7",
-            "title": "7",
-            "type": "object",
-            "pattern": "",
-            "description": null,
-            "validationMessage": "",
-            "default": null
-          }
-        ],
-        "required": []
       }
     }
   },
@@ -122,7 +139,8 @@
       "description": "første step. Ever.",
       "fields": [
         "1",
-        "7"
+        "7",
+        "8"
       ]
     },
     {
