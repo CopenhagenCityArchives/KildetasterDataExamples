@@ -7,102 +7,58 @@
     "title": "Indtastning af begravelsesprotokoller",
     "type": "object",
     "properties": {
-      "1": {
-        "title": "Begravet person",
-        "type": "object",
-        "properties": {
-          "6": {
-            "parent_id": null,
-            "entity_id": "1",
-            "entity_field_id": "6",
-            "title": "Alder",
-            "type": "integer",
-            "pattern": "/\\d{1,}/",
-            "description": null,
-            "validationMessage": "Skal udfyldes",
-            "default": null
-          },
-          "3": {
-            "parent_id": null,
-            "entity_id": "1",
-            "entity_field_id": "3",
-            "title": "Fødested",
-            "type": "typeahead",
-            "pattern": "",
-            "description": "Vælg et fødested på listen",
-            "validationMessage": "Fødested udfyldes",
-            "default": null
-          },
-          "2": {
-            "parent_id": null,
-            "entity_id": "1",
-            "entity_field_id": "2",
-            "title": "Efternavn",
-            "type": "string",
-            "pattern": "",
-            "description": "Indtast alle andre navne end fornavnet",
-            "validationMessage": "Efternavn skal udfyldes",
-            "default": null
-          },
-          "1": {
-            "parent_id": null,
-            "entity_id": "1",
-            "entity_field_id": "1",
-            "title": "Fornavn",
-            "type": "string",
-            "pattern": "",
-            "description": "Indtast personens første navn her",
-            "validationMessage": "Fornavnet skal udfyldes",
-            "default": null
-          },
-          "Stillinger": {
-            "title": "Stillinger",
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "8": {
-                  "parent_id": "1",
-                  "entity_id": "3",
-                  "entity_field_id": "8",
-                  "title": "8",
-                  "type": "object",
-                  "pattern": null,
-                  "description": null,
-                  "validationMessage": null,
-                  "default": null
-                },
-                "7": {
-                  "parent_id": "1",
-                  "entity_id": "3",
-                  "entity_field_id": "7",
-                  "title": "7",
-                  "type": "object",
-                  "pattern": "",
-                  "description": null,
-                  "validationMessage": "",
-                  "default": null
-                }
-              }
-            },
-            "required": []
-          }
-        },
-        "required": [
-          "6",
-          "3",
-          "2",
-          "1"
-        ]
+      "6": {
+        "parent_id": null,
+        "entity_id": "1",
+        "entity_field_id": "6",
+        "title": "Alder",
+        "type": "integer",
+        "pattern": "/\\d{1,}/",
+        "description": null,
+        "validationMessage": "Skal udfyldes",
+        "default": null
+      },
+      "3": {
+        "parent_id": null,
+        "entity_id": "1",
+        "entity_field_id": "3",
+        "title": "Fødested",
+        "type": "typeahead",
+        "pattern": "",
+        "description": "Vælg et fødested på listen",
+        "validationMessage": "Fødested udfyldes",
+        "default": null
       },
       "2": {
+        "parent_id": null,
+        "entity_id": "1",
+        "entity_field_id": "2",
+        "title": "Efternavn",
+        "type": "string",
+        "pattern": "",
+        "description": "Indtast alle andre navne end fornavnet",
+        "validationMessage": "Efternavn skal udfyldes",
+        "default": null
+      },
+      "1": {
+        "parent_id": null,
+        "entity_id": "1",
+        "entity_field_id": "1",
+        "title": "Fornavn",
+        "type": "string",
+        "pattern": "",
+        "description": "Indtast personens første navn her",
+        "validationMessage": "Fornavnet skal udfyldes",
+        "default": null
+      },
+      "Ægtefæller": {
         "title": "Ægtefæller",
         "type": "array",
         "items": {
           "type": "object",
           "properties": {
             "5": {
-              "parent_id": null,
+              "parent_id": "1",
               "entity_id": "2",
               "entity_field_id": "5",
               "title": "5",
@@ -113,7 +69,7 @@
               "default": null
             },
             "4": {
-              "parent_id": null,
+              "parent_id": "1",
               "entity_id": "2",
               "entity_field_id": "4",
               "title": "4",
@@ -129,6 +85,27 @@
           "5",
           "4"
         ]
+      },
+      "Stillinger": {
+        "title": "Stillinger",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "7": {
+              "parent_id": "1",
+              "entity_id": "3",
+              "entity_field_id": "7",
+              "title": "7",
+              "type": "object",
+              "pattern": "",
+              "description": null,
+              "validationMessage": "",
+              "default": null
+            }
+          }
+        },
+        "required": []
       }
     }
   },
@@ -138,9 +115,8 @@
       "name": "teststep",
       "description": "første step. Ever.",
       "fields": [
-        "1",
-        "7",
-        "8"
+        "1.1",
+        "3.7"
       ]
     },
     {
@@ -148,9 +124,9 @@
       "name": "test2",
       "description": "andet",
       "fields": [
-        "2",
-        "3",
-        "6"
+        "1.2",
+        "1.3",
+        "1.6"
       ]
     }
   ]
