@@ -1,0 +1,120 @@
+{
+  "id": "1",
+  "name": "Indtastning af begravelsesprotokoller",
+  "description": "Dette er Stadsarkivets første indtastningsprojekt",
+  "collection_id": "1",
+  "schema": {
+    "id": "Indtastning af begravelsesprotokoller",
+    "type": "object",
+    "properties": {
+      "Begravet person": {
+        "title": "Begravet person",
+        "type": "object",
+        "properties": {
+          "6": {
+            "parent_id": null,
+            "entity_id": "1",
+            "entity_field_id": "6",
+            "title": "Alder",
+            "type": "integer",
+            "pattern": "/\\d{1,}/",
+            "description": null,
+            "validationMessage": "Skal udfyldes",
+            "default": null
+          },
+          "3": {
+            "parent_id": null,
+            "entity_id": "1",
+            "entity_field_id": "3",
+            "title": "Fødested",
+            "type": "autocomplete",
+            "pattern": "0",
+            "description": "Vælg et fødested på listen",
+            "validationMessage": "Fødested udfyldes",
+            "default": null
+          },
+          "2": {
+            "parent_id": null,
+            "entity_id": "1",
+            "entity_field_id": "2",
+            "title": "Efternavn",
+            "type": "text",
+            "pattern": "0",
+            "description": "Indtast alle andre navne end fornavnet",
+            "validationMessage": "Efternavn skal udfyldes",
+            "default": null
+          },
+          "1": {
+            "parent_id": null,
+            "entity_id": "1",
+            "entity_field_id": "1",
+            "title": "Fornavn",
+            "type": "text",
+            "pattern": "0",
+            "description": "Indtast personens første navn her",
+            "validationMessage": "Fornavnet skal udfyldes",
+            "default": null
+          },
+          "Ægtefæller": {
+            "title": "Ægtefæller",
+            "type": "object",
+            "properties": {
+              "5": {
+                "parent_id": "1",
+                "entity_id": "2",
+                "entity_field_id": "5",
+                "title": "Efternavn",
+                "type": "text",
+                "pattern": "0",
+                "description": "Indtast alle andre navne end fornavnet",
+                "validationMessage": "Efternavn skal udfyldes",
+                "default": null
+              },
+              "4": {
+                "parent_id": "1",
+                "entity_id": "2",
+                "entity_field_id": "4",
+                "title": "Fornavn",
+                "type": "text",
+                "pattern": "0",
+                "description": "Indtast personens første navn her",
+                "validationMessage": "Fornavnet skal udfyldes",
+                "default": null
+              }
+            },
+            "required": [
+              "5",
+              "4"
+            ]
+          }
+        },
+        "required": [
+          "6",
+          "3",
+          "2",
+          "1"
+        ]
+      }
+    }
+  },
+  "steps": [
+    {
+      "id": "1",
+      "name": "teststep",
+      "description": "første step. Ever.",
+      "fields": [
+        "1"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "test2",
+      "description": "andet",
+      "fields": [
+        "2",
+        "3",
+        "6"
+      ]
+    }
+  ]
+}
