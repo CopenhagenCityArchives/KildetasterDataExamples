@@ -13,3 +13,9 @@ http://kbhkilder.dk/1508/stable/api/tasks
 Get units:
 
 http://kbhkilder.dk/1508/stable/api/units?collection_id=1&task_id=1
+
+Get pages:
+http://kbhkilder.dk/1508/stable/api/pages?unit_id=1
+
+Get next available page:
+http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_number=1
