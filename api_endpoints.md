@@ -14,7 +14,7 @@ Get units:
 
 http://kbhkilder.dk/1508/stable/api/units?collection_id=1&task_id=1
 
-Get pages: (not necessary)
+Get pages:
 
 http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 
