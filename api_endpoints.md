@@ -9,3 +9,7 @@ http://kbhkilder.dk/1508/stable/api/entries/1 (post with raw data according to J
 Get tasks:
 
 http://kbhkilder.dk/1508/stable/api/tasks
+
+Get units:
+
+http://kbhkilder.dk/1508/stable/api/units?collection_id=1&task_id=1
