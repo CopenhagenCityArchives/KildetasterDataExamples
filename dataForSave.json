@@ -1,0 +1,23 @@
+{
+    "firstname": "Hans",
+    "lastname": "Hansen",
+    "age": 42,
+    "addresses": [{
+        "street": "Min gade",
+        "number": 223
+    }, {
+        "street": "Andengade",
+        "number": 14
+    }],
+    "birthplace": {
+        "id": 1,
+        "name": "Abort"
+    },
+    "spouses": [{
+        "lastName": "Grethe",
+        "firstName": "Hansen"
+    }, {
+        "lastName": "Hanne",
+        "firstName": "Larsen"
+    }]
+}
