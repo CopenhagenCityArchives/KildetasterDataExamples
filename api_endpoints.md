@@ -2,7 +2,7 @@ Ny liste (fra Github):
 
 Get task JSON schema:
 
-http://kbhkilder.dk/1508/stable/api/taskschema/1
+http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 
 Add entry:
 http://kbhkilder.dk/1508/stable/api/entries/1 
