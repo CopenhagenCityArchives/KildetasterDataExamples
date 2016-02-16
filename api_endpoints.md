@@ -10,7 +10,7 @@ http://kbhkilder.dk/1508/stable/api/entries/1
 Where 1 = task id
 
 Data format:
-
+```
 {
 
 page_id: 23, 
@@ -60,7 +60,7 @@ width: 0.25
 addresses: {}
 
 }
-
+```
 
 Get tasks:
 http://kbhkilder.dk/1508/stable/api/tasks
