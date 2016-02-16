@@ -7,6 +7,8 @@ http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 Add entry:
 http://kbhkilder.dk/1508/stable/api/entries/1 
 
+Where 1 = task id
+
 Data format:
 
 {
