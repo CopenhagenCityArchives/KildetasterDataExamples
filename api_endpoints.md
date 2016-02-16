@@ -5,14 +5,12 @@ Get task JSON schema:
 http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 
 Add entry:
-http://kbhkilder.dk/1508/stable/api/entries/1 
-
-Where 1 = task id
+http://kbhkilder.dk/1508/stable/api/entries
 
 Data format:
 ```
 {
-
+task_id: 1,
 page_id: 23, 
 post: {
 
