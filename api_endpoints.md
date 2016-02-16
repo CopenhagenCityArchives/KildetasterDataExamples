@@ -74,7 +74,7 @@ Get pages:
 http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 
 Get page:
-http://kbhkilder.dk/1508/stable/api/pages?page_id=2
+http://kbhkilder.dk/1508/stable/api/pages/2
 Returns an array of posts and "nextpost" which is a best guess of the position and size of the next post
 
 Get next available page:
