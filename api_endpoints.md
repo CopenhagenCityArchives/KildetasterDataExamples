@@ -59,3 +59,6 @@ http://kbhkilder.dk/api/datasource/1?q=adelgade
 
 Get searchable fields for collections:
 http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
+
+Search:
+http://kbhkilder.dk/1508/stable/api/search? + SOLR query
