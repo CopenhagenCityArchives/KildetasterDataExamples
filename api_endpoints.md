@@ -26,9 +26,28 @@ height: 0.25,
 
 width: 0.25
 
-}
+},
 
-persons: {},
+"persons":{  
+      "firstnames":"Jensine",
+      "lastname":"Hansen",
+      "age":42,
+      "civilstatus":"Gift",
+      "dateOfDeath":"01-01-1905",
+      "yearOfBirth":1905,
+      "deathcauses":[  
+         {  
+            "deathcause":"lungebtændelse"
+         },
+         {  
+            "deathcause":"hjertefejl"
+         }
+      ],
+      "burials":{
+      "chapel":"Alm. Hosp - Almindelig Hospital",
+      "parish":"Helliggejst",
+      "cemetary":"Mariebjerg"
+      },
 
 addresses: {}
 
