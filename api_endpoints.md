@@ -14,10 +14,6 @@ Data format:
 {
 
 page_id: 23, 
-
-task_id: 1,
-
-
 post: {
 
 x: 0.5,
@@ -77,6 +73,9 @@ http://kbhkilder.dk/1508/stable/api/units?collection_id=1&task_id=1
 Get pages:
 http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 
+Get page:
+http://kbhkilder.dk/1508/stable/api/pages?page_id=2
+Returns an array of posts and "nextpost" which is a best guess of the position and size of the next post
 
 Get next available page:
 http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
