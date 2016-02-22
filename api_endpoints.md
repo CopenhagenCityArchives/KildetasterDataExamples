@@ -82,6 +82,10 @@ Returns the image for the given post (in this example post with id 188)
 Get next available page:
 http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
+Get entry
+http://kbhkilder.dk/1508/stable/api/entries/12
+Returns a specifik entry based on the id
+
 Datasources:
 http://kbhkilder.dk/api/datasource/1?q=adelgade
 
