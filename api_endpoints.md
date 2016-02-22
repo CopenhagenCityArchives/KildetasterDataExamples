@@ -76,7 +76,7 @@ http://kbhkilder.dk/1508/stable/api/pages/2
 Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
 
 Get post image:
-http://kbhkilder.dk/1508/stable/api/post/188/image
+http://kbhkilder.dk/1508/stable/api/posts/188/image
 Returns the image for the given post (in this example post with id 188)
 
 Get next available page:
