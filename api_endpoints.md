@@ -83,7 +83,7 @@ Get next available page:
 http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
 Get entry data for post
-http://kbhkilder.dk/1508/stable/api/post/56
+http://kbhkilder.dk/1508/stable/api/posts/196
 Returns a specifik post with data for all entries based on the post id
 
 Datasources:
