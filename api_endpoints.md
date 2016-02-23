@@ -94,3 +94,18 @@ http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
 
 Search:
 http://kbhkilder.dk/1508/stable/api/search? + SOLR query
+
+Error reporting:
+http://kbhkilder.dk/1508/stable/api/errorreports
+```
+Required post data {
+      task_id,
+      post_id,
+      entity_name,
+      field_name,
+      concrete_entries_id,
+      comment,
+      value
+}
+```
+
