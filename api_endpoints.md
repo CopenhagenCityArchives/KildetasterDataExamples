@@ -99,7 +99,6 @@ Error reporting:
 http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 Required post data {
-      task_id,
       post_id,
       entity_name,
       field_name,
