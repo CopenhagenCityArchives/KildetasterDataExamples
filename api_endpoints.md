@@ -75,6 +75,10 @@ Get page:
 http://kbhkilder.dk/1508/stable/api/pages/2
 Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
 
+Get entries:
+http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
+Returns the entry for a given task and post (there can be only one entry pr. post and task)
+
 Get post image:
 http://kbhkilder.dk/1508/stable/api/posts/188/image
 Returns the image for the given post (in this example post with id 188)
