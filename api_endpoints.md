@@ -86,6 +86,9 @@ Get entry data for post
 http://kbhkilder.dk/1508/stable/api/posts/196
 Returns a specifik post with data for all entries based on the post id
 
+Get specific entry:
+http://kbhkilder.dk/1508/stable/api/entries/6
+
 Datasources:
 http://kbhkilder.dk/api/datasource/1?q=adelgade
 
