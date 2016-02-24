@@ -88,10 +88,13 @@ http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&curr
 
 Get entry data for post
 http://kbhkilder.dk/1508/stable/api/posts/209
-Returns a specifik post with data for all entries based on the post id
+Returns a specific post with data for all entries based on the post id
 
 Get specific entry:
 http://kbhkilder.dk/1508/stable/api/entries/6
+
+Get error reports:
+http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
 
 Datasources:
 http://kbhkilder.dk/api/datasource/1?q=adelgade
