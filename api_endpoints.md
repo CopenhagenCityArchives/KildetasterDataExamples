@@ -5,6 +5,7 @@ Get task JSON schema:
 http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 
 Add entry:
+POST
 http://kbhkilder.dk/1508/stable/api/entries
 
 Data format:
@@ -55,6 +56,21 @@ addresses: {}
 
 }
 ```
+
+Update entry:
+PATCH
+http://kbhkilder.dk/1508/stable/api/entries/76
+
+```
+{  
+"entity_name":"persons",
+"field_name" : "firstnames",
+"value":"Niels",
+"concrete_entries_id":178,
+"task_id":1
+}
+```
+
 
 Get tasks:
 http://kbhkilder.dk/1508/stable/api/tasks
