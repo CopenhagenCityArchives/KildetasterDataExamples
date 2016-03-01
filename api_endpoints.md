@@ -124,7 +124,7 @@ http://kbhkilder.dk/1508/stable/api/entries/6
 Get error reports:
 http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
 OR
-http://kbhkilder.dk/1508/stable/api/errorreports?user_id=1
+http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
 
 Datasources:
 http://kbhkilder.dk/api/datasource/1?q=adelgade
