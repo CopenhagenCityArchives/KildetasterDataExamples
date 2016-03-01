@@ -15,14 +15,14 @@ POST
 http://kbhkilder.dk/1508/stable/api/entries
 ```
 {
-task_id: 1,
-page_id: 23, 
-post: {
-
-x: 0.5,
-y: 0.5,
-height: 0.25,
-width: 0.25
+      task_id: 1,
+      page_id: 23, 
+      post: {
+      
+      x: 0.5,
+      y: 0.5,
+      height: 0.25,
+      width: 0.25
 
 },
 
@@ -46,7 +46,7 @@ width: 0.25
       "parish":"Helliggejst",
       "cemetary":"Mariebjerg"
       },
-addresses: {}
+      addresses: {}
 }
 ```
 
@@ -56,11 +56,11 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 
 ```
 {  
-"entity_name":"persons",
-"field_name" : "firstnames",
-"value":"Niels",
-"concrete_entries_id":178,
-"task_id":1
+      "entity_name":"persons",
+      "field_name" : "firstnames",
+      "value":"Niels",
+      "concrete_entries_id":178,
+      "task_id":1
 }
 ```
 
@@ -83,7 +83,7 @@ http://kbhkilder.dk/1508/stable/api/taskspages/76
 
 ```
 {  
-"is_done":"1"
+      "is_done":"1"
 }
 ```
 
@@ -108,23 +108,23 @@ http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 * Get page:
 http://kbhkilder.dk/1508/stable/api/pages/2
 
-Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
+            Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
 
 
 * Get entries:
 http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
 
-Returns the entry for a given task and post (there can be only one entry pr. post and task)
+            Returns the entry for a given task and post (there can be only one entry pr. post and task)
 
 * Get post image:
 http://kbhkilder.dk/1508/stable/api/posts/188/image
 
-Returns the image for the given post (in this example post with id 188)
+            Returns the image for the given post (in this example post with id 188)
 
 * Get entry data for post
 http://kbhkilder.dk/1508/stable/api/posts/209
 
-Returns a specific post with data for all entries based on the post id
+            Returns a specific post with data for all entries based on the post id
 
 * Get specific entry
 http://kbhkilder.dk/1508/stable/api/entries/6
