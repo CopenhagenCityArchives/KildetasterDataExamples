@@ -2,11 +2,9 @@
 #Config
 
 * Get task JSON schema:
-
 http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 
 * Get searchable fields for collections:
-
 http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
 
 
