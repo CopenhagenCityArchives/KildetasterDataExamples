@@ -116,17 +116,17 @@ http://kbhkilder.dk/1508/stable/api/pages/2
 * Get entries:
 http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
 
-** Returns the entry for a given task and post (there can be only one entry pr. post and task)
+Returns the entry for a given task and post (there can be only one entry pr. post and task)
 
 * Get post image:
 http://kbhkilder.dk/1508/stable/api/posts/188/image
 
-** Returns the image for the given post (in this example post with id 188)
+Returns the image for the given post (in this example post with id 188)
 
 * Get entry data for post
 http://kbhkilder.dk/1508/stable/api/posts/209
 
-**Returns a specific post with data for all entries based on the post id
+Returns a specific post with data for all entries based on the post id
 
 * Get specific entry
 http://kbhkilder.dk/1508/stable/api/entries/6
