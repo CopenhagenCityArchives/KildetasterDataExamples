@@ -80,8 +80,8 @@ Get task:
 http://kbhkilder.dk/1508/stable/api/tasks/1
 
 
-Get units:
-http://kbhkilder.dk/1508/stable/api/units?collection_id=1&task_id=1
+Get units for task:
+http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
 
 
 Get pages:
