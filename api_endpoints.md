@@ -1,6 +1,15 @@
+
+#Config
+
 Get task JSON schema:
 
 http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
+
+Get searchable fields for collections:
+http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
+
+
+#Add/update data
 
 Add entry:
 POST
@@ -69,6 +78,30 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 }
 ```
 
+Error reporting:
+http://kbhkilder.dk/1508/stable/api/errorreports
+```
+Required post data {
+      post_id,
+      entity_name,
+      field_name,
+      concrete_entries_id,
+      comment,
+      value
+}
+```
+
+Update task page:
+PATCH
+http://kbhkilder.dk/1508/stable/api/taskspages/76
+
+```
+{  
+"is_done":"1"
+}
+```
+
+#Tasks, units pages, entries, posts
 
 Get tasks:
 http://kbhkilder.dk/1508/stable/api/tasks
@@ -91,15 +124,6 @@ Get page:
 http://kbhkilder.dk/1508/stable/api/pages/2
 Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
 
-Update task page:
-PATCH
-http://kbhkilder.dk/1508/stable/api/taskspages/76
-
-```
-{  
-"is_done":"1"
-}
-```
 
 Get entries:
 http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
@@ -108,9 +132,6 @@ Returns the entry for a given task and post (there can be only one entry pr. pos
 Get post image:
 http://kbhkilder.dk/1508/stable/api/posts/188/image
 Returns the image for the given post (in this example post with id 188)
-
-Get next available page:
-http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
 Get entry data for post
 http://kbhkilder.dk/1508/stable/api/posts/209
@@ -124,6 +145,13 @@ http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
 OR
 http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
 
+
+Get next available page:
+http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
+
+
+#User activities
+
 Get active users:
 http://kbhkilder.dk/1508/stable/api/activeusers?task_id=1&unit_id=1
 
@@ -133,22 +161,9 @@ http://kbhkilder.dk/1508/stable/api/useractivities?user_id=607
 Datasources:
 http://kbhkilder.dk/api/datasource/1?q=adelgade
 
-Get searchable fields for collections:
-http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
+
+#search
 
 Search:
 http://kbhkilder.dk/1508/stable/api/search? + SOLR query
-
-Error reporting:
-http://kbhkilder.dk/1508/stable/api/errorreports
-```
-Required post data {
-      post_id,
-      entity_name,
-      field_name,
-      concrete_entries_id,
-      comment,
-      value
-}
-```
 
