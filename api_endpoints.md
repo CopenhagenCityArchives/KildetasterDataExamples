@@ -1,5 +1,3 @@
-Ny liste (fra Github):
-
 Get task JSON schema:
 
 http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
@@ -125,6 +123,12 @@ Get error reports:
 http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
 OR
 http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
+
+Get active users:
+http://kbhkilder.dk/1508/stable/api/activeusers?task_id=1&unit_id=1
+
+Get user activities:
+http://kbhkilder.dk/1508/stable/api/useractivities?user_id=607
 
 Datasources:
 http://kbhkilder.dk/api/datasource/1?q=adelgade
