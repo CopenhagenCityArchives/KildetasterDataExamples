@@ -108,7 +108,7 @@ http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 * Get page:
 http://kbhkilder.dk/1508/stable/api/pages/2
 
-** Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
+Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
 
 
 * Get entries:
