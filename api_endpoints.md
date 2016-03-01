@@ -91,53 +91,53 @@ http://kbhkilder.dk/1508/stable/api/taskspages/76
 
 #Tasks, units pages, entries, posts
 
-*Get tasks:
+* Get tasks:
 http://kbhkilder.dk/1508/stable/api/tasks
 
 
-*Get task:
+* Get task:
 http://kbhkilder.dk/1508/stable/api/tasks/1
 
-*Get units for task:
+* Get units for task:
 http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
 
-*Get specific unit:
+* Get specific unit:
 http://kbhkilder.dk/1508/stable/api/units/1
 
-*Get pages:
+* Get pages:
 http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 
-*Get page:
+* Get page:
 http://kbhkilder.dk/1508/stable/api/pages/2
 
 Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
 
 
-*Get entries:
+* Get entries:
 http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
 
 Returns the entry for a given task and post (there can be only one entry pr. post and task)
 
-*Get post image:
+* Get post image:
 http://kbhkilder.dk/1508/stable/api/posts/188/image
 
-*Returns the image for the given post (in this example post with id 188)
+* Returns the image for the given post (in this example post with id 188)
 
-*Get entry data for post
+* Get entry data for post
 http://kbhkilder.dk/1508/stable/api/posts/209
 
 Returns a specific post with data for all entries based on the post id
 
-*Get specific entry
+* Get specific entry
 http://kbhkilder.dk/1508/stable/api/entries/6
 
-*Get error reports
+* Get error reports
 http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
 OR
 http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
 
 
-*Get next available page:
+* Get next available page:
 http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
 
