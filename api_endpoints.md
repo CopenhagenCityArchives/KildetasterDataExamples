@@ -83,6 +83,8 @@ http://kbhkilder.dk/1508/stable/api/tasks/1
 Get units for task:
 http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
 
+Get specific unit:
+http://kbhkilder.dk/1508/stable/api/units/1
 
 Get pages:
 http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
