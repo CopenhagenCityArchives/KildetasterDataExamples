@@ -66,7 +66,7 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 }
 ```
 
-Error reporting:
+Error reporting: POST
 http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 {
