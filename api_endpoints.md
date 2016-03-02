@@ -80,7 +80,7 @@ Send error report to super user: PATCH
 http://kbhkilder.dk/1508/stable/api/errorreports/7
 ```
 {
-"to_super_user":1
+"to_super_user":"1"
 }
 ```
 
