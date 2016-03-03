@@ -86,7 +86,7 @@ http://kbhkilder.dk/1508/stable/api/errorreports/7
 
 Update task page:
 PATCH
-http://kbhkilder.dk/1508/stable/api/taskspages/76
+http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
 
 ```
 {  
