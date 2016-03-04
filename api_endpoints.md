@@ -146,14 +146,17 @@ http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
 http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
 
-#User activities
+#Users
+
+Get user:
+http://kbhkilder.dk/1508/stable/api/users/621
+Returns user info including informations about which tasks the user is superuser for
 
 Get active users:
 http://kbhkilder.dk/1508/stable/api/activeusers?task_id=1&unit_id=1
 
 Get user activities:
 http://kbhkilder.dk/1508/stable/api/useractivities?user_id=607
-
 
 #Search
 
