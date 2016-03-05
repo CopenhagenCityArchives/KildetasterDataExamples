@@ -162,6 +162,7 @@ Returns user info including informations about which tasks the user is superuser
 Get active users:
 http://kbhkilder.dk/1508/stable/api/activeusers?task_id=1&unit_id=32
 http://kbhkilder.dk/1508/stable/api/tasks/1/units/32/activeusers
+http://kbhkilder.dk/1508/stable/api/tasks/1/activeusers
 
 Get user activities:
 http://kbhkilder.dk/1508/stable/api/useractivities?user_id=607
