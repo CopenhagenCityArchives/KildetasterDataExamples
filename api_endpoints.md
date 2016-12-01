@@ -18,7 +18,7 @@ http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
 * Get specific entry
 http://kbhkilder.dk/1508/stable/api/entries/6
 
-Add entry:
+* Add entry
 POST
 http://kbhkilder.dk/1508/stable/api/entries
 ```
@@ -56,7 +56,7 @@ http://kbhkilder.dk/1508/stable/api/entries
 }
 ```
 
-Update entry:
+* Update entry
 PUT
 http://kbhkilder.dk/1508/stable/api/entries/76
 
@@ -97,8 +97,8 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 }
 ```
 
-##DEPRECATED:
-Update entry:
+* Update entry:
+DEPRECATED:
 PATCH
 http://kbhkilder.dk/1508/stable/api/entries/76
 
@@ -113,13 +113,12 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 ```
 
 #Error reports
-
 * Get error reports
 http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
 OR
 http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
 
-Create error report: POST
+* Create error report: POST
 http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 {
@@ -131,9 +130,9 @@ http://kbhkilder.dk/1508/stable/api/errorreports
       "value": "original_value"
 }
 ```
-Edit specific error report: PATCH
-http://kbhkilder.dk/1508/stable/api/errorreports/7
 
+* Edit specific error report: PATCH
+http://kbhkilder.dk/1508/stable/api/errorreports/7
 ```
 {
     "to_super_user": 1,
@@ -142,9 +141,8 @@ http://kbhkilder.dk/1508/stable/api/errorreports/7
 }
 ```
 
-Edit multiple error reports: PATCH
+* Edit multiple error reports: PATCH
 http://kbhkilder.dk/1508/stable/api/errorreports
-
 ```
 [
 {
@@ -163,7 +161,7 @@ http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 
 #Taskpages
-Update task page:
+* Update task page
 PATCH
 http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
 
@@ -176,7 +174,6 @@ http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
 
 
 #Tasks
-
 * Get tasks:
 http://kbhkilder.dk/1508/stable/api/tasks
 
