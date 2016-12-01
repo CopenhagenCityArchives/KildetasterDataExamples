@@ -286,35 +286,25 @@ http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&curr
 
 ###Get user
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/users/621
+GET   http://kbhkilder.dk/1508/stable/api/users/621
 Returns user info including informations about which tasks the user is superuser for
 
 ###Get active users by task and unit
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/activeusers?task_id=1&unit_id=1
+GET   http://kbhkilder.dk/1508/stable/api/activeusers?task_id=1&unit_id=1
 
 ###Get user activities
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/useractivities?user_id=607
+GET   http://kbhkilder.dk/1508/stable/api/useractivities?user_id=607
 
 #Search
 
 Search
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/search? + SOLR query
+GET   http://kbhkilder.dk/1508/stable/api/search? + SOLR query
 
 #Datasources
 
 Datasources
 
-GEt
-
-http://kbhkilder.dk/api/datasource/1?q=adelgade
+GET   http://kbhkilder.dk/api/datasource/1?q=adelgade
