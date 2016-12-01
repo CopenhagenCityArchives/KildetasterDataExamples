@@ -115,6 +115,38 @@ http://kbhkilder.dk/1508/stable/api/errorreports
       "value": "original_value"
 }
 ```
+Edit specific error report: PATCH
+http://kbhkilder.dk/1508/stable/api/errorreports/7
+
+```
+{
+    "to_super_user": 1,
+    "deleted": 0,
+    "deleted_reason": ""
+}
+```
+
+Edit multiple error reports: PATCH
+http://kbhkilder.dk/1508/stable/api/errorreports
+
+```
+[
+{
+    "id": 119,
+    "to_super_user": 1,
+    "deleted": 0,
+    "deleted_reason": ""
+},
+{
+    "id": 118,
+    "to_super_user": 1,
+    "deleted": 0,
+    "deleted_reason": ""
+}
+]
+```
+
+
 Send error report to super user: PATCH
 http://kbhkilder.dk/1508/stable/api/errorreports/7
 ```
