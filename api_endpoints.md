@@ -107,12 +107,12 @@ Error reporting: POST
 http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 {
-      post_id,
-      entity_name,
-      field_name,
-      concrete_entries_id,
-      comment,
-      value
+      "post_id": 1306,
+      "entity_name": "deathcauses",
+      "field_name": "deathcause",
+      "concrete_entries_id": 1175,
+      "comment": "",
+      "value": "original_value"
 }
 ```
 Send error report to super user: PATCH
