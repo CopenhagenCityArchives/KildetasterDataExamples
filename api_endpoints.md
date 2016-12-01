@@ -9,6 +9,63 @@ GET   http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 
 GET   http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
 
+#Tasks
+###Get tasks
+
+GET   http://kbhkilder.dk/1508/stable/api/tasks
+
+
+###Get task
+
+GET   http://kbhkilder.dk/1508/stable/api/tasks/1
+
+#Units
+
+###Get units for task
+
+GET   http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
+
+###Get unit
+
+GET   http://kbhkilder.dk/1508/stable/api/units/1
+
+#Pages
+###Get pages
+
+GET   http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
+
+###Get page
+
+GET   http://kbhkilder.dk/1508/stable/api/pages/2
+
+Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
+
+###Get next available page
+GET   http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
+
+#Taskpages
+
+###Update task page
+
+PATCH   http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
+
+```
+{  
+      "is_done":"1"
+}
+```
+
+#Posts
+###Get entry data for post
+GET   http://kbhkilder.dk/1508/stable/api/posts/209
+
+      Returns a post with data for all entries based on the post id
+
+###Get post image
+GET   http://kbhkilder.dk/1508/stable/api/posts/188/image
+
+      Returns the image for the given post (in this example post with id 188)
+
 
 #Entries
 
@@ -114,64 +171,6 @@ PATCH   http://kbhkilder.dk/1508/stable/api/entries/76
       "task_id":1
 }
 ```
-
-#Tasks
-###Get tasks
-
-GET   http://kbhkilder.dk/1508/stable/api/tasks
-
-
-###Get task
-
-GET   http://kbhkilder.dk/1508/stable/api/tasks/1
-
-#Units
-
-###Get units for task
-
-GET   http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
-
-###Get unit
-
-GET   http://kbhkilder.dk/1508/stable/api/units/1
-
-#Pages
-###Get pages
-
-GET   http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
-
-###Get page
-
-GET   http://kbhkilder.dk/1508/stable/api/pages/2
-
-Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
-
-###Get next available page
-GET   http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
-
-#Taskpages
-
-###Update task page
-
-PATCH   http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
-
-```
-{  
-      "is_done":"1"
-}
-```
-
-#Posts
-###Get entry data for post
-GET   http://kbhkilder.dk/1508/stable/api/posts/209
-
-      Returns a post with data for all entries based on the post id
-
-###Get post image
-GET   http://kbhkilder.dk/1508/stable/api/posts/188/image
-
-      Returns the image for the given post (in this example post with id 188)
-
 
 #Error reports
 ###Get error reports by task and post
