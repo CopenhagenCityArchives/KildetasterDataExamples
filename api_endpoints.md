@@ -146,15 +146,6 @@ http://kbhkilder.dk/1508/stable/api/errorreports
 ]
 ```
 
-
-Send error report to super user: PATCH
-http://kbhkilder.dk/1508/stable/api/errorreports/7
-```
-{
-"to_super_user":"1"
-}
-```
-
 Update task page:
 PATCH
 http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
