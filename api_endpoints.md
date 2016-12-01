@@ -212,18 +212,18 @@ PATCH   http://kbhkilder.dk/1508/stable/api/errorreports/7
 PATCH   http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 [
-{
-    "id": 119,
-    "to_super_user": 1,
-    "deleted": 0,
-    "deleted_reason": ""
-},
-{
-    "id": 118,
-    "to_super_user": 1,
-    "deleted": 0,
-    "deleted_reason": ""
-}
+      {
+          "id": 119,
+          "to_super_user": 1,
+          "deleted": 0,
+          "deleted_reason": ""
+      },
+      {
+          "id": 118,
+          "to_super_user": 1,
+          "deleted": 0,
+          "deleted_reason": ""
+      }
 ]
 ```
 
