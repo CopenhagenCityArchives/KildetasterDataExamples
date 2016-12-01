@@ -18,7 +18,7 @@ GET   http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
 
       Returns the entry for a given task and post (there can be only one entry pr. post and task)
 
-###Get specific entry
+###Get entry
 
 GET   http://kbhkilder.dk/1508/stable/api/entries/6
 
@@ -139,7 +139,7 @@ POST    http://kbhkilder.dk/1508/stable/api/errorreports
       "value": "original_value"
 }
 ```
-###Edit specific error report
+###Edit error report
 
 PATCH   http://kbhkilder.dk/1508/stable/api/errorreports/7
 ```
@@ -198,7 +198,7 @@ GET   http://kbhkilder.dk/1508/stable/api/tasks/1
 
 GET   http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
 
-###Get specific unit
+###Get unit
 
 GET   http://kbhkilder.dk/1508/stable/api/units/1
 
@@ -217,7 +217,7 @@ Returns an array of posts and "next_post" which is a best guess of the position 
 ###Get entry data for post
 GET   http://kbhkilder.dk/1508/stable/api/posts/209
 
-      Returns a specific post with data for all entries based on the post id
+      Returns a post with data for all entries based on the post id
 
 ###Get post image
 GET   http://kbhkilder.dk/1508/stable/api/posts/188/image
