@@ -1,13 +1,13 @@
 
 #Config
 
-* Get task JSON schema:
+##Get task JSON schema:
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 
-* Get searchable fields for collections:
+##Get searchable fields for collections:
 
 GET
 
@@ -16,7 +16,7 @@ http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
 
 #Entries
 
-* Get entries:
+##Get entries:
 
 GET
 
@@ -24,13 +24,13 @@ http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
 
       Returns the entry for a given task and post (there can be only one entry pr. post and task)
 
-* Get specific entry
+##Get specific entry
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/entries/6
 
-* Add entry
+##Add entry
 
 POST
 
@@ -70,7 +70,7 @@ http://kbhkilder.dk/1508/stable/api/entries
 }
 ```
 
-* Update entry
+##Update entry
 
 PUT
 
@@ -113,7 +113,7 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 }
 ```
 
-* Update entry:
+##Update entry:
 DEPRECATED:
 
 PATCH
@@ -131,7 +131,7 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 ```
 
 #Error reports
-* Get error reports by task and post
+##Get error reports by task and post
 
 GET
 
@@ -139,13 +139,13 @@ http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
 
 
 
-* Get error reports by user and task
+##Get error reports by user and task
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
 
-* Create error report
+##Create error report
 
 POST
 
@@ -160,7 +160,7 @@ http://kbhkilder.dk/1508/stable/api/errorreports
       "value": "original_value"
 }
 ```
-* Edit specific error report
+##Edit specific error report
 
 PATCH
 
@@ -173,7 +173,7 @@ http://kbhkilder.dk/1508/stable/api/errorreports/7
 }
 ```
 
-* Edit multiple error reports
+##Edit multiple error reports
 
 PATCH
 
@@ -197,7 +197,7 @@ http://kbhkilder.dk/1508/stable/api/errorreports
 
 #Taskpages
 
-* Update task page
+##Update task page
 
 PATCH
 
@@ -212,14 +212,14 @@ http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
 
 
 #Tasks
-* Get tasks:
+##Get tasks:
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/tasks
 
 
-* Get task:
+##Get task:
 
 GET
 
@@ -227,26 +227,26 @@ http://kbhkilder.dk/1508/stable/api/tasks/1
 
 #Units
 
-* Get units for task:
+##Get units for task:
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
 
-* Get specific unit:
+##Get specific unit:
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/units/1
 
 #Pages
-* Get pages:
+##Get pages:
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 
-* Get page:
+##Get page:
 
 GET
 
@@ -258,12 +258,12 @@ http://kbhkilder.dk/1508/stable/api/pages/2
 
 GET
 
-* Get entry data for post
+##Get entry data for post
 http://kbhkilder.dk/1508/stable/api/posts/209
 
       Returns a specific post with data for all entries based on the post id
 
-* Get post image:
+##Get post image:
 
 GET
 
@@ -275,7 +275,7 @@ http://kbhkilder.dk/1508/stable/api/posts/188/image
 
 GET
 
-* Get next available page:
+##Get next available page:
 http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
 
@@ -283,20 +283,20 @@ http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&curr
 
 #Users
 
-* Get user
+##Get user
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/users/621
 Returns user info including informations about which tasks the user is superuser for
 
-* Get active users by task and unit
+##Get active users by task and unit
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/activeusers?task_id=1&unit_id=1
 
-* Get user activities
+##Get user activities
 
 GET
 
