@@ -51,6 +51,37 @@ http://kbhkilder.dk/1508/stable/api/entries
 ```
 
 Update entry:
+PUT
+http://kbhkilder.dk/1508/stable/api/entries/76
+
+```
+"persons":{  
+      "firstnames":"Jensine",
+      "lastname":"Hansen",
+      "age":42,
+      "civilstatus":"Gift",
+      "dateOfDeath":"01-01-1905",
+      "yearOfBirth":1905,
+      "id":43,
+      "deathcauses":[  
+         {  
+            "id": 3423,
+            "deathcause":"lungebtændelse"
+         },
+         {  
+            "deathcause":"hjertefejl"
+         }
+      ],
+      "burials":{
+      "chapel":"Alm. Hosp - Almindelig Hospital",
+      "parish":"Helliggejst",
+      "cemetary":"Mariebjerg"
+      },
+      addresses: {}
+}
+```
+
+Update entry:
 PATCH
 http://kbhkilder.dk/1508/stable/api/entries/76
 
