@@ -113,8 +113,9 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 }
 ```
 
-###Update entry:
-DEPRECATED:
+###Update entry
+
+(DEPRECATED)
 
 PATCH
 
@@ -212,14 +213,14 @@ http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
 
 
 #Tasks
-###Get tasks:
+###Get tasks
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/tasks
 
 
-###Get task:
+###Get task
 
 GET
 
@@ -227,26 +228,26 @@ http://kbhkilder.dk/1508/stable/api/tasks/1
 
 #Units
 
-###Get units for task:
+###Get units for task
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
 
-###Get specific unit:
+###Get specific unit
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/units/1
 
 #Pages
-###Get pages:
+###Get pages
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 
-###Get page:
+###Get page
 
 GET
 
@@ -263,7 +264,7 @@ http://kbhkilder.dk/1508/stable/api/posts/209
 
       Returns a specific post with data for all entries based on the post id
 
-###Get post image:
+###Get post image
 
 GET
 
@@ -275,7 +276,7 @@ http://kbhkilder.dk/1508/stable/api/posts/188/image
 
 GET
 
-###Get next available page:
+###Get next available page
 http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
 
@@ -304,7 +305,7 @@ http://kbhkilder.dk/1508/stable/api/useractivities?user_id=607
 
 #Search
 
-Search:
+Search
 
 GET
 
@@ -312,7 +313,7 @@ http://kbhkilder.dk/1508/stable/api/search? + SOLR query
 
 #Datasources
 
-Datasources:
+Datasources
 
 GEt
 
