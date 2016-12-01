@@ -213,6 +213,9 @@ GET   http://kbhkilder.dk/1508/stable/api/pages/2
 
 Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
 
+###Get next available page
+GET   http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
+
 #Posts
 ###Get entry data for post
 GET   http://kbhkilder.dk/1508/stable/api/posts/209
@@ -223,10 +226,6 @@ GET   http://kbhkilder.dk/1508/stable/api/posts/209
 GET   http://kbhkilder.dk/1508/stable/api/posts/188/image
 
       Returns the image for the given post (in this example post with id 188)
-
-#Pages
-###Get next available page
-GET   http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
 
 
