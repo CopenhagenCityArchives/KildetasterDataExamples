@@ -59,12 +59,12 @@ PATCH   http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
 ###Get entry data for post
 GET   http://kbhkilder.dk/1508/stable/api/posts/209
 
-      Returns a post with data for all entries based on the post id
+Returns a post with data for all entries based on the post id
 
 ###Get post image
 GET   http://kbhkilder.dk/1508/stable/api/posts/188/image
 
-      Returns the image for the given post (in this example post with id 188)
+Returns the image for the given post (in this example post with id 188)
 
 
 #Entries
@@ -73,7 +73,7 @@ GET   http://kbhkilder.dk/1508/stable/api/posts/188/image
 
 GET   http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
 
-      Returns the entry for a given task and post (there can be only one entry pr. post and task)
+Returns the entry for a given task and post (there can be only one entry pr. post and task)
 
 ###Get entry
 
@@ -232,6 +232,7 @@ PATCH   http://kbhkilder.dk/1508/stable/api/errorreports
 ###Get user
 
 GET   http://kbhkilder.dk/1508/stable/api/users/621
+
 Returns user info including informations about which tasks the user is superuser for
 
 ###Get active users by task and unit
