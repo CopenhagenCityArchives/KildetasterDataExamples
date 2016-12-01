@@ -1,13 +1,13 @@
 
 #Config
 
-##Get task JSON schema:
+##Get task JSON schema
 
 GET
 
 http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 
-##Get searchable fields for collections:
+##Get searchable fields for collections
 
 GET
 
@@ -16,7 +16,7 @@ http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
 
 #Entries
 
-##Get entries:
+##Get entries
 
 GET
 
