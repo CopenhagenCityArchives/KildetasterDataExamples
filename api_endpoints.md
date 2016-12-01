@@ -252,4 +252,4 @@ GET   http://kbhkilder.dk/1508/stable/api/search? + SOLR query
 
 Datasources
 
-GET   http://kbhkilder.dk/api/datasource/1?q=adelgade
+GET   http://kbhkilder.dk/1508/stable/api/datasource/1?q=te
