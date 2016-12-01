@@ -3,38 +3,28 @@
 
 ###Get task JSON schema
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
+GET   http://kbhkilder.dk/1508/stable/api/taskschema&task_id=1
 
 ###Get searchable fields for collections
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
+GET   http://kbhkilder.dk/1508/stable/api/searchconfig?collection_id=1
 
 
 #Entries
 
 ###Get entries
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
+GET   http://kbhkilder.dk/1508/stable/api/entries?task_id=1&post_id=201
 
       Returns the entry for a given task and post (there can be only one entry pr. post and task)
 
 ###Get specific entry
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/entries/6
+GET   http://kbhkilder.dk/1508/stable/api/entries/6
 
 ###Add entry
 
-POST
-
-http://kbhkilder.dk/1508/stable/api/entries
+POST  http://kbhkilder.dk/1508/stable/api/entries
 ```
 {
     "task_id": 1,
@@ -72,9 +62,7 @@ http://kbhkilder.dk/1508/stable/api/entries
 
 ###Update entry
 
-PUT
-
-http://kbhkilder.dk/1508/stable/api/entries/76
+PUT   http://kbhkilder.dk/1508/stable/api/entries/76
 
 ```
 {
@@ -113,13 +101,9 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 }
 ```
 
-###Update entry
+###Update entry (DEPRECATED)
 
-(DEPRECATED)
-
-PATCH
-
-http://kbhkilder.dk/1508/stable/api/entries/76
+PATCH   http://kbhkilder.dk/1508/stable/api/entries/76
 
 ```
 {  
@@ -134,23 +118,17 @@ http://kbhkilder.dk/1508/stable/api/entries/76
 #Error reports
 ###Get error reports by task and post
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
+GET   http://kbhkilder.dk/1508/stable/api/errorreports?task_id=1&post_id=201
 
 
 
 ###Get error reports by user and task
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
+GET   http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_id=1
 
 ###Create error report
 
-POST
-
-http://kbhkilder.dk/1508/stable/api/errorreports
+POST    http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 {
       "post_id": 1306,
@@ -163,9 +141,7 @@ http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 ###Edit specific error report
 
-PATCH
-
-http://kbhkilder.dk/1508/stable/api/errorreports/7
+PATCH   http://kbhkilder.dk/1508/stable/api/errorreports/7
 ```
 {
     "to_super_user": 1,
@@ -176,9 +152,7 @@ http://kbhkilder.dk/1508/stable/api/errorreports/7
 
 ###Edit multiple error reports
 
-PATCH
-
-http://kbhkilder.dk/1508/stable/api/errorreports
+PATCH   http://kbhkilder.dk/1508/stable/api/errorreports
 ```
 [
 {
@@ -200,9 +174,7 @@ http://kbhkilder.dk/1508/stable/api/errorreports
 
 ###Update task page
 
-PATCH
-
-http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
+PATCH   http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
 
 ```
 {  
@@ -210,74 +182,51 @@ http://kbhkilder.dk/1508/stable/api/taskspages?task_id=1&page_id=23
 }
 ```
 
-
-
 #Tasks
 ###Get tasks
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/tasks
+GET   http://kbhkilder.dk/1508/stable/api/tasks
 
 
 ###Get task
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/tasks/1
+GET   http://kbhkilder.dk/1508/stable/api/tasks/1
 
 #Units
 
 ###Get units for task
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
+GET   http://kbhkilder.dk/1508/stable/api/tasksunits?task_id=1&index_active=1
 
 ###Get specific unit
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/units/1
+GET   http://kbhkilder.dk/1508/stable/api/units/1
 
 #Pages
 ###Get pages
 
-GET
-
-http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
+GET   http://kbhkilder.dk/1508/stable/api/pages?unit_id=1&page_number=12
 
 ###Get page
 
-GET
+GET   http://kbhkilder.dk/1508/stable/api/pages/2
 
-http://kbhkilder.dk/1508/stable/api/pages/2
-
-      Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
+Returns an array of posts and "next_post" which is a best guess of the position and size of the next post (false when there is no more room for posts)
 
 #Posts
-
-GET
-
 ###Get entry data for post
-http://kbhkilder.dk/1508/stable/api/posts/209
+GET   http://kbhkilder.dk/1508/stable/api/posts/209
 
       Returns a specific post with data for all entries based on the post id
 
 ###Get post image
-
-GET
-
-http://kbhkilder.dk/1508/stable/api/posts/188/image
+GET   http://kbhkilder.dk/1508/stable/api/posts/188/image
 
       Returns the image for the given post (in this example post with id 188)
 
 #Pages
-
-GET
-
 ###Get next available page
-http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
+GET   http://kbhkilder.dk/1508/stable/api/pages/nextavailable?task_id=1&unit_id=1&current_page_number=1
 
 
 
