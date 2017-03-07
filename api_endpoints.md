@@ -66,6 +66,28 @@ GET   http://kbhkilder.dk/1508/stable/api/posts/188/image
 
 Returns the image for the given post (in this example post with id 188)
 
+###Create post
+POST http://kbhkilder.dk/1508/stable/api/posts
+```
+{
+      "x": 0.231,
+      "y": 0.552,
+      "height": 0.12, 
+      "width" : 0.1,
+      "page_id" : 1423
+}
+```
+###Update post
+PATCH http://kbhkilder.dk/1508/stable/api/posts/209
+```
+{
+      "x": 0.231,
+      "y": 0.552,
+      "height": 0.12, 
+      "width" : 0.1,
+      "page_id" : 1423
+}
+```
 
 #Entries
 
@@ -85,13 +107,7 @@ POST  http://kbhkilder.dk/1508/stable/api/entries
 ```
 {
     "task_id": 1,
-    "page_id": 23,
-    "post": {
-        "x": 0.5,
-        "y": 0.5,
-        "height": 0.25,
-        "width": 0.25
-    },
+    "post_id": 23,
     "persons": {
         "firstnames": "Jensine",
         "lastname": "Hansen",
@@ -124,13 +140,7 @@ PUT   http://kbhkilder.dk/1508/stable/api/entries/76
 ```
 {
     "task_id": 1,
-    "page_id": 23,
-    "post": {
-        "x": 0.5,
-        "y": 0.5,
-        "height": 0.25,
-        "width": 0.25
-    },
+    "post_id": 23,
     "persons": {
         "id": 231,
         "firstnames": "Jensine",
