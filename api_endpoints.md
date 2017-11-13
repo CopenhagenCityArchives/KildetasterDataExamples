@@ -221,7 +221,7 @@ If add_metadata = true:
       "concrete_entries_id": 1175,
       "comment": "",
       "value": "original_value"
-      "add_metadata" : false
+      "add_metadata" : true
 }
 ```
 ###Edit error report
