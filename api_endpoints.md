@@ -196,14 +196,31 @@ GET   http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_i
 ###Create error report
 
 POST    http://kbhkilder.dk/1508/stable/api/errorreports
+If add_metadata = false:
 ```
 {
+      'task_id': 1, 
+      'post_id': 'prb-123122',
+      'comment': 'fejl i fornavn, skulle være Grethe'
+      'entity': 'person'
+      'field': 'firstnames', 
+      'add_metadata': false
+}
+
+```
+
+
+If add_metadata = true:
+```
+{
+      'task_id': 1, 
       "post_id": 1306,
-      "entity_name": "deathcauses",
-      "field_name": "deathcause",
+      "entity": "deathcauses",
+      "field": "deathcause",
       "concrete_entries_id": 1175,
       "comment": "",
       "value": "original_value"
+      "add_metadata" : false
 }
 ```
 ###Edit error report
