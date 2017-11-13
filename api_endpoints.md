@@ -196,6 +196,7 @@ GET   http://kbhkilder.dk/1508/stable/api/errorreports?relevant_user_id=1&task_i
 ###Create error report
 
 POST    http://kbhkilder.dk/1508/stable/api/errorreports
+
 If add_metadata = false:
 ```
 {
